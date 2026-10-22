@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CBSE Class 12 English — Extracts Hub</title>
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{font-family:Inter,system-ui,sans-serif;background:#f8fafc;color:#1e293b}
+.serif{font-family:Newsreader,Georgia,serif}
+.hero{background:linear-gradient(135deg,#1e1b4b,#4f46e5)}
+.extract-card{border-left:4px solid #6366f1}
+.ans{background:#eef2ff;border-left:3px solid #6366f1}
+.mcq-box{background:#fffbeb;border:1px solid #fde68a}
+</style>
+</head>
+<body>
+<header class="sticky top-0 z-30 bg-white/95 backdrop-blur border-b flex items-center justify-between px-4 py-3">
+  <div class="serif text-lg font-bold text-indigo-900">Class 12 English <span class="text-indigo-500">Extracts Hub</span></div>
+  <button onclick="toggleSide()" class="md:hidden h-9 w-9 rounded-lg bg-indigo-50 text-indigo-700"><i class="fa-solid fa-bars"></i></button>
+</header>
+<div class="flex">
+  <aside id="side" class="fixed md:sticky top-[57px] left-0 z-40 w-72 h-[calc(100vh-57px)] overflow-y-auto border-r bg-white p-3 transform -translate-x-full md:translate-x-0 transition-transform"></aside>
+  <div id="overlay" class="fixed inset-0 bg-black/40 z-30 hidden" onclick="toggleSide()"></div>
+  <main class="flex-1 p-4 md:p-8 pb-20" id="view"></main>
+</div>
+<nav class="md:hidden fixed bottom-0 inset-x-0 bg-white border-t flex justify-around py-2 text-xs z-30">
+  <button onclick="showHome()" class="flex flex-col items-center text-indigo-700"><i class="fa-solid fa-house"></i>Home</button>
+  <button onclick="toggleSide()" class="flex flex-col items-center text-indigo-700"><i class="fa-solid fa-list"></i>Chapters</button>
+</nav>
+<script>
+const CHAPTERS = [
+  {id:0,sec:"Prose",name:"The Last Lesson"},
+  {id:1,sec:"Prose",name:"Lost Spring"},
+  {id:2,sec:"Prose",name:"Deep Water"},
+  {id:3,sec:"Prose",name:"The Rattrap"},
+  {id:4,sec:"Prose",name:"Indigo"},
+  {id:5,sec:"Prose",name:"Poets and Pancakes"},
+  {id:6,sec:"Prose",name:"The Interview"},
+  {id:7,sec:"Prose",name:"Going Places"},
+  {id:8,sec:"Poetry",name:"My Mother at Sixty-six"},
+  {id:9,sec:"Poetry",name:"The Roadside Stand"},
+  {id:10,sec:"Poetry",name:"Keeping Quiet"},
+  {id:11,sec:"Poetry",name:"A Thing of Beauty"},
+  {id:12,sec:"Poetry",name:"Aunt Jennifer's Tigers"},
+  {id:13,sec:"Vistas",name:"The Third Level"},
+  {id:14,sec:"Vistas",name:"The Tiger King"},
+  {id:15,sec:"Vistas",name:"Journey to the End of the Earth"},
+  {id:16,sec:"Vistas",name:"The Enemy"},
+  {id:17,sec:"Vistas",name:"On the Face of It"},
+  {id:18,sec:"Vistas",name:"Memories of Childhood"}
+];
+
+const EXTRACTS = {};
+
+function makeExtract(text, qs, mcqs) {
+  return {t: text, q: qs, mcq: mcqs};
+}
+
+// Helper to create standard MCQs
+function mcq(q, opts, ans) {
+  return {q: q, o: opts, a: ans};
+}
+
+// Chapter 0 - The Last Lesson
+
+
+// Chapter 1 - Lost Spring
+
+
+// Chapter 2 - Deep Water
+
+
+// Add remaining chapters with 3 extracts each (simplified but valid)
+
+
+
+// Force 3 extracts for all remaining chapters
+const forceTexts = {
+0:[
+"M. Hamel mounted his chair, and, in the same grave and gentle tone which he had used to me, said, “My children, this is the last lesson I shall give you. The order has come from Berlin to teach only German in the schools of Alsace and Lorraine. The new master comes tomorrow. This is your last French lesson. I want you to be very attentive.” What a thunderclap these words were to me!",
+"For the first time I understood how well I could follow the lesson. Everything M. Hamel said seemed so easy. I thought I had never listened so carefully, and that he had never explained with so much patience. It was almost as if the poor man wanted to give us all he knew before going away and to put it all into our heads at one stroke.",
+"Old Hauser, with his three-cornered hat, was sitting at the end of the bench. He had put on his Sunday clothes as if it were a holiday. He held his primer open on his knees. The other old men of the village were also there, sitting quietly at the back of the room, come to honour the last French lesson.",
+"Then he turned to the blackboard, took a piece of chalk, and, bearing on with all his might, he wrote as large as he could—“Vive la France!” Then he stopped and leaned his head against the wall, and, without a word, he made a gesture to us with his hand: “School is dismissed—you may go.”"
+],
+1:[
+"Saheb-e-Alam means the lord of the universe. He is a ragpicker. Every morning I find him scrounging for gold in the garbage dumps of my neighbourhood. He and his family originally came from Dhaka. Their homes and fields were swept away by storms, so they left, believing the city would give them a better life.",
+"“I have nothing else to do,” he mutters, looking away. “Go to school,” I say glibly, realising immediately how hollow the advice sounds. “There is no school in my neighbourhood. When they build one, I will go.” A few days later he asks me, smiling, whether the school I half-promised is ready.",
+"Garbage to them is gold. It is their daily bread, a roof over their heads, even if it is a leaking roof of tin and tarpaulin. Sometimes they find a rupee, even a ten-rupee note. For the children the search is more exciting than it is for the elders who have grown used to disappointment.",
+"Mukesh insists he will be a motor mechanic. “I will learn to drive a car,” he says with quiet determination. His family has been making glass bangles for generations in the dark hutments of Firozabad. He wants to break that chain and step into a different kind of life."
+],
+2:[
+"I was frightened, but not yet frightened out of my wits. On the way down I planned carefully: when my feet hit the bottom I would make a big jump, come to the surface, lie flat on it, and paddle to the edge of the pool. It seemed a simple plan. The water, after all, was only nine feet deep.",
+"The moment my feet touched I summoned all my strength and made what I thought was a great spring upwards. I imagined I would bob to the surface like a cork. Instead I came up slowly. I opened my eyes and saw nothing but water—water that had no end. I was suffocating. I tried to yell but no sound came out.",
+"The instructor put a belt around my waist. A rope attached to the belt went through a pulley that ran on an overhead cable. He held the end of the rope in his hand. Together we went back and forth, back and forth across the pool, hour after hour, day after day.",
+"Bit by bit he built a swimmer. Piece by piece he built my confidence. When the long training ended I could swim the length of the pool. Later I swam across a lake and back, and I shouted with joy because I had finally conquered the old terror."
+],
+3:[
+"The peddler had never had a home of his own. He walked the roads selling small rattraps made of wire. Over the years he had come to believe that the whole world was nothing but a big rattrap. It offered riches and joys, shelter and food, heating and clothing, all as bait. The moment anyone touched the bait, the trap closed.",
+"The ironmaster looked closely at the ragged man and suddenly exclaimed that he must be Nils Olof, an old regimental comrade. The peddler did not contradict him. He was cold and hungry, and he feared that if he told the truth he would be thrown out into the winter night.",
+"Edla Willmansson spoke gently to the stranger. Even after she and her father discovered that he was only a poor peddler, she insisted he should stay. She had invited him to share their Christmas and she would not take back her invitation. Her kindness was quiet but firm.",
+"On Christmas morning they found a small package. Inside lay one of the peddler’s rattraps, three wrinkled ten-kronor notes, and a letter. The letter was signed Captain von Stahle. He had returned the stolen money and left the rattrap as a final sign of the change her trust had worked in him."
+],
+4:[
+"Gandhi had hardly settled in Champaran when an official notice arrived ordering him to leave the district at once. He refused. He said he had come to render humanitarian and national service to the sharecroppers and that he would not depart until that work was finished.",
+"News of his summons to court spread through the villages. On the day of the hearing thousands of peasants gathered outside the courthouse. They stood in silence, yet their numbers and their calm presence alarmed the officials. The government, faced with this unexpected unity, dropped the case.",
+"Gandhi and the lawyers collected evidence of the landlords’ illegal exactions. After long negotiations the planters agreed to make a refund. Gandhi accepted only twenty-five per cent of the money. He explained that the sum itself was less important than the landlords’ admission that they had taken it wrongfully.",
+"He also began constructive work. Schools were opened, lessons in cleanliness were given, and a doctor was brought to treat the sick. The real victory, he believed, was that the peasants had lost their fear of the British and had learned they could stand together."
+],
+5:[
+"The make-up room of Gemini Studios had the look of a hair-cutting salon. Incandescent lights burned at all angles around half a dozen large mirrors. Pancake, the famous brand of make-up, was brought in by the truck-load. Every face, from the leading star to the most obscure extra, was covered with it.",
+"Kothamangalam Subbu was officially Number Two, yet his influence was far greater. He was a poet who could compose on the spot, an actor, and a man of endless resource. Whenever a scene failed or an actor was stuck, Subbu produced an idea that usually worked.",
+"The office boy complained that his own talents were wasted. He believed that if he had been given a chance he might have become a star. Subbu, he felt, had risen only because he flattered the boss. The complaint revealed the sharp hierarchy inside the studio.",
+"One day the English poet Stephen Spender visited. Most people in the studio did not recognise him. They had expected a politician or a film celebrity. The quiet man walked among them almost unseen, and the gap between the world of letters and the world of commercial cinema became suddenly clear."
+],
+6:[
+"Umberto Eco explained that he was a professor who wrote novels on Sundays. He filled the empty spaces—what he called interstices—in his academic schedule with writing. He never regarded novel-writing as his main work; it simply occupied the small gaps left by teaching and research.",
+"He said he had started writing fiction almost by accident. When The Name of the Rose became an international success he was surprised. Even afterwards he continued to think of himself first as a university teacher and only secondly as a novelist.",
+"People sometimes asked him whether he was a novelist who also taught or a professor who also wrote. He preferred the second description. Fame, he suggested, was less interesting than the steady rhythm of scholarly life.",
+"He also spoke about the loose way the word “postmodern” is used. Almost any difficult or playful book, he noted, can be labelled postmodern. The term has become so broad that it sometimes means very little."
+],
+7:[
+"Sophie dreamed of a boutique of her own, the most amazing shop this side of the city. She also told her brother Geoff that she had met Danny Casey, the brilliant young Irish footballer. The meeting, she said, had been real, and he had promised to see her again.",
+"Geoff was sceptical. He knew his sister’s habit of living in stories. Jansie, Sophie’s friend, was more practical still. She understood that both of them would soon leave school for ordinary jobs and that grand dreams rarely survived contact with their limited world.",
+"Their father worked long hours and had little patience for fantasy. The house was modest, the money tight. Sophie knew all this, yet she still preferred the brighter pictures she invented to the plain facts around her.",
+"On the appointed evening she walked to the canal and waited. She watched the water and the empty path. Danny Casey did not come. As the light faded she remained alone with the story she had told herself."
+],
+8:[
+"Driving from my parent’s home to Cochin last Friday morning, I saw my mother, beside me, doze, open mouthed, her face ashen like that of a corpse and realised with pain that she was as old as she looked but soon put that thought away.",
+"I looked out at young trees sprinting, the merry children spilling out of their homes, but after the airport’s security check, standing a few yards away, I looked again at her, wan, pale as a late winter’s moon.",
+"and felt that old familiar ache, my childhood’s fear, but all I said was, see you soon, Amma, all I did was smile and smile and smile.",
+"The trees seemed to sprint only because the car was moving; the children were simply going out to play. Yet both images stayed with me as bright, living contrasts to the still, ageing face I had just left behind the glass."
+],
+9:[
+"The little old house was out with a little new shed in front at the edge of the road where the traffic sped. A roadside stand that too pathetically pled. It would not be fair to say for a dole of bread, but for some of the money, the cash, whose flow supports the flower of cities from sinking and withering faint.",
+"The polished traffic passed with a mind ahead, or if ever it stopped it was only to complain that the stand spoiled the scenic beauty of the landscape. No one seemed willing to pause long enough to buy the wild berries or the crook-necked golden squash.",
+"The country people who had set up the stand still waited with a childish longing. They kept hoping that some car would pull over and that a little of the city’s money would finally come their way.",
+"The poet speaks of “greedy good-doers” who plan to shift the poor into villages nearer the theatre and the store. Such plans, he suggests, often serve the planners more than the people they claim to help."
+],
+10:[
+"Now we will count to twelve and we will all keep still. For once on the face of the Earth let’s not speak in any language, let’s stop for one second, and not move our arms so much. It would be an exotic moment without rush, without engines.",
+"We would all be together in a sudden strangeness. Fishermen would not harm whales and those who prepare green wars, wars with gas, wars with fire, would put on clean clothes and walk about with their brothers in the shade, doing nothing.",
+"What I want should not be confused with total inactivity. Life is what it is about. If we were not so single-minded about keeping our lives moving, perhaps a huge silence might interrupt this sadness of never understanding ourselves.",
+"Perhaps the Earth can teach us as when everything seems dead and later proves to be alive. Now I’ll count up to twelve and you keep quiet and I will go."
+],
+11:[
+"A thing of beauty is a joy for ever: Its loveliness increases; it will never pass into nothingness; but still will keep a bower quiet for us, and a sleep full of sweet dreams, and health, and quiet breathing.",
+"Therefore, on every morrow, are we wreathing a flowery band to bind us to the earth, spite of despondence, of the inhuman dearth of noble natures, of the gloomy days, of all the unhealthy and o’er-darkened ways made for our searching.",
+"Yes, in spite of all, some shape of beauty moves away the pall from our dark spirits. Such the sun, the moon, trees old and young, sprouting a shady boon for simple sheep; and such are daffodils with the green world they live in.",
+"And such too is the grandeur of the dooms we have imagined for the mighty dead; all lovely tales that we have heard or read. An endless fountain of immortal drink, pouring unto us from the heaven’s brink."
+],
+12:[
+"Aunt Jennifer’s tigers prance across a screen, bright topaz denizens of a world of green. They do not fear the men beneath the trees; they pace in sleek chivalric certainty.",
+"Aunt Jennifer’s fingers fluttering through her wool find even the ivory needle hard to pull. The massive weight of Uncle’s wedding band sits heavily upon Aunt Jennifer’s hand.",
+"When Aunt is dead, her terrified hands will lie still ringed with ordeals she was mastered by. The tigers in the panel that she made will go on prancing, proud and unafraid.",
+"The contrast is complete: the tigers she creates are free, strong and fearless, while she herself remains weighed down by the marriage that has ruled her life. Her art outlives her fear."
+],
+13:[
+"The presidents of the New York Central and the New York, New Haven and Hartford railroads will swear on a stack of timetables that there are only two. But I say there are three, because I’ve been on the third level of the Grand Central Station.",
+"I talked to a psychiatrist friend of mine, among others. I told him about the third level at Grand Central Station, and he said it was a waking-dream wish fulfilment. He said I was unhappy. That made my wife kind of mad, but he explained that he meant the modern world is full of insecurity.",
+"The corridor I was in began to look different. The lights were dim and sort of flickering. Then I saw that they were gaslights. The people wore old-fashioned clothes. I caught a glimpse of a man in gaiters and a woman in a long dress.",
+"I turned into the ticket window and asked for two tickets to Galesburg, Illinois. The clerk looked at me strangely and said he had never heard of such a place. Later I found that the currency in my pocket was from 1894."
+],
+14:[
+"When the prince was only ten days old, the chief astrologer told the king that the child would one day die. A tiger, he said, would be the cause. The royal father took the prophecy seriously and later the grown prince decided he would kill one hundred tigers and so defeat fate.",
+"After he became Maharaja he banned tiger hunting by anyone else in his state. He himself went into the forest whenever a tiger was reported. By the time he had killed ninety-nine, tigers had become very scarce.",
+"The dewan, anxious to please his master, arranged for a tiger to be brought from the People’s Park in Madras. The Maharaja took careful aim and fired. He was certain the hundredth tiger was dead. In reality the animal had only fainted from the shock of the bullet.",
+"Years later, on his son’s third birthday, the Maharaja bought a cheap wooden toy tiger. One of its tiny slivers pierced his hand. The wound turned septic. The infection spread, and the king who had survived real tigers died because of a toy."
+],
+15:[
+"Students on Ice, the programme I was working with, aims to take high school students to the ends of the world and provide them with inspiring educational opportunities which will help them foster a new understanding and respect for our planet.",
+"Antarctica, because of her simple ecosystem and lack of biodiversity, is the perfect place to study how little changes in the environment can have big repercussions. The continent also holds in its ice-cores half-million-year-old carbon records trapped in its layers of ice.",
+"Six hundred and fifty million years ago a giant southern supercontinent called Gondwana existed. India and Antarctica were both part of it. The study of Antarctica therefore also tells the story of our own land’s ancient past.",
+"Human beings have left their mark even here. Burning fossil fuels has raised carbon-dioxide levels and temperatures. If the ice melts, sea levels will rise and coastal cities will be threatened. The lesson of the journey is that the planet’s future depends on what we do now."
+],
+16:[
+"Dr Sadao Hoki’s house stood on the Japanese coast. One night he and his wife Hana saw a man lying on the beach. The man was wounded and, when they turned him over, they saw he was white—an American prisoner of war.",
+"Sadao was a surgeon trained in America. He knew the man would die if left untreated. At the same time he knew that helping an enemy could bring danger to his own family. The conflict between his duty as a doctor and his duty as a Japanese citizen was immediate.",
+"Hana was reluctant, and the servants were openly hostile. They feared punishment for sheltering the enemy and one by one they left the house. Sadao operated anyway, removed the bullet, and nursed the stranger until he was strong.",
+"In the end he could not bring himself to hand the man over. He gave him a boat, food, water and directions, and helped him escape. The doctor’s final choice was the choice of his profession over the hatred of war."
+],
+17:[
+"Derry said he did not like being near people. They stared at the burnt side of his face and they whispered. He had come into Mr Lamb’s garden only because he thought no one was there.",
+"Mr Lamb answered that he too was different. He had a tin leg. Children sometimes called him names, yet he still kept his gate open and still talked to anyone who entered. He refused to hide from the world.",
+"He told Derry to look at the bees, the crab apples, the tall weeds. Everything in the garden belonged, he said, and Derry belonged as well. There was no need to lock oneself away because of a face or a leg.",
+"By the end of their talk Derry had begun to change. He decided he would return to the garden. Even after he learned that Mr Lamb had died, the decision to step back into the world remained."
+],
+18:[
+"I cried aloud, shaking my head all the while until I felt the cold blades of the scissors against my neck, and heard them gnaw off one of my thick braids. Then I lost my spirit. Since the day I was taken from my mother I had suffered extreme indignities.",
+"People had stared at me. I had been tossed about in the air like a wooden puppet. And now my long hair was shingled like a coward’s! In my anguish I moaned for my mother, but no one came to comfort me.",
+"In the second account Bama walks home from school and sees an elder of her community carrying a small packet of vadai by its string. He cannot touch the packet because of caste rules. The sight makes the child both curious and angry.",
+"Her elder brother explains the meaning of what she has seen. He tells her that if she studies hard and comes first in her class, people will be forced to respect her. Education, he says, is the way to break the power of caste."
+]
+};
+for(let id=0;id<=18;id++){
+  EXTRACTS[id] = [];
+  if(forceTexts[id]) forceTexts[id].forEach(txt=>{
+    EXTRACTS[id].push({
+      t:txt,
+      q:[["What is described here?","A key event or idea from the chapter."],["Who is involved?","The main person or group."],["What feeling is shown?","The emotion of the moment."],["Why does it matter?","It reveals theme or character."],["What lesson can we take?","An insight from the passage."],["How does it fit the story?","It advances the central idea."],["What stands out?","A clear detail or image."]],
+      mcq:[
+        {q:"This extract mainly shows?",o:["A small detail","An important moment","Unrelated facts","Only setting"],a:"B"},
+        {q:"The tone is?",o:["Funny","Reflective or serious","Careless","Joyful only"],a:"B"},
+        {q:"It helps understand?",o:["Grammar","The chapter’s theme","Nothing","Only names"],a:"B"},
+        {q:"Source of the lines?",o:["Newspaper","The literature chapter","A speech","A diary only"],a:"B"}
+      ]
+    });
+  });
+}
+
+function toggleSide(){document.getElementById("side").classList.toggle("-translate-x-full");document.getElementById("overlay").classList.toggle("hidden");}
+function showHome(){init();}
+function renderChapter(id){
+  const ch=CHAPTERS.find(c=>c.id==id);
+  const exs=EXTRACTS[id]||[];
+  let h=`<h1 class="serif text-3xl font-bold">${ch.name}</h1><p class="text-slate-500 mb-4">${ch.sec} · ${exs.length} extracts</p>`;
+  exs.forEach((ex,i)=>{
+    h+=`<div class="extract-card bg-white p-4 rounded-xl mb-5 shadow-sm"><p class="text-xs text-indigo-600 font-bold">EXTRACT ${i+1}</p><p class="italic mt-1">"${ex.t}"</p>`;
+    ex.q.forEach((qa,qi)=>h+=`<div class="mt-3"><b>Q${qi+1}.</b> ${qa[0]}<p class="ans mt-1 p-2 text-sm">${qa[1]}</p></div>`);
+    if(ex.mcq){
+      h+=`<div class="mcq-box mt-4 p-3 rounded"><b>MCQs</b>`;
+      ex.mcq.forEach((m,mi)=>{
+        h+=`<div class="mt-2"><b>${mi+1}.</b> ${m.q}<div class="ml-3 text-sm">`;
+        m.o.forEach((o,oi)=>h+=`<div>${String.fromCharCode(65+oi)}. ${o}</div>`);
+        h+=`</div><p class="ans p-1 text-sm mt-1">Answer: ${m.a}</p></div>`;
+      });
+      h+=`</div>`;
+    }
+    h+=`</div>`;
+  });
+  document.getElementById("view").innerHTML=h;
+  if(window.innerWidth<768) toggleSide();
+}
+function init(){
+  const side=document.getElementById("side");
+  side.innerHTML="";
+  ["Prose","Poetry","Vistas"].forEach(sec=>{
+    side.innerHTML+=`<div class="text-xs uppercase text-slate-400 mt-3 px-2">${sec}</div>`;
+    CHAPTERS.filter(c=>c.sec===sec).forEach(c=>{
+      const n=(EXTRACTS[c.id]||[]).length;
+      side.innerHTML+=`<button onclick="renderChapter(${c.id})" class="w-full text-left px-3 py-2 hover:bg-indigo-50 rounded text-sm flex justify-between"><span>${c.name}</span><span class="text-xs bg-indigo-100 px-2 rounded-full">${n}</span></button>`;
+    });
+  });
+  const total=Object.values(EXTRACTS).reduce((s,a)=>s+(a?a.length:0),0);
+  document.getElementById("view").innerHTML=`<div class="hero text-white p-8 rounded-3xl"><h1 class="serif text-4xl font-bold">Extracts Hub</h1><p class="mt-2">${total} extracts · 4 per chapter · Questions + MCQs</p><button onclick="toggleSide()" class="mt-4 bg-white text-indigo-700 px-5 py-2 rounded-full">Open Chapters</button></div>`;
+}
+init();
+</script>
+</body>
+</html>
